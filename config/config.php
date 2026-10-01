@@ -10,11 +10,11 @@ define('APP_TAGLINE', 'Web-Based 3D Catalog & Augmented Reality Visualization');
 define('APP_CURRENCY', 'RM');
 
 // Database Configuration (Default XAMPP settings)
-define('DB_HOST', '127.0.0.1');
+define('DB_HOST', 'localhost');
 define('DB_PORT', '3306');
-define('DB_NAME', 'ar_furniture');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_NAME', 'synergy1_derricklim_ar_furniture_place');
+define('DB_USER', 'synergy1_yenping');
+define('DB_PASS', 'R.zb0ZwEuGZ}*fW2');
 define('DB_CHARSET', 'utf8mb4');
 
 // File Upload Limits & Allowed Formats
