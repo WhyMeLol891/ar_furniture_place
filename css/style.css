@@ -1,0 +1,118 @@
+/**
+ * AR Spatial Furniture Catalog & Visualization System Stylesheet
+ */
+
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-light: #eff6ff;
+    --dark-bg: #0f172a;
+    --light-bg: #f8fafc;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+    --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1e293b;
+    background-color: var(--light-bg);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Card */
+.product-card {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--hover-shadow) !important;
+}
+
+.product-thumb-link {
+    background: radial-gradient(circle, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.transition-zoom {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .transition-zoom {
+    transform: scale(1.05);
+}
+
+.hover-primary:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Model Viewer Container */
+.model-viewer-wrapper {
+    position: relative;
+    background: radial-gradient(circle, #ffffff 0%, #e2e8f0 100%);
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    --poster-color: transparent;
+}
+
+/* Custom AR Button */
+.ar-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding: 12px 28px;
+    font-weight: 700;
+    border-radius: 50px;
+    letter-spacing: 0.3px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+}
+
+.ar-button:hover {
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* QR Code Display */
+#qr-code-canvas, #qr-container img {
+    max-width: 140px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.extra-small {
+    font-size: 0.75rem;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .desktop-qr-block {
+        display: none !important;
+    }
+    
+    .model-viewer-wrapper {
+        min-height: 380px !important;
+    }
+}
